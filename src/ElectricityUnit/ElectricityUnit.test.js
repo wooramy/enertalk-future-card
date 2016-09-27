@@ -76,6 +76,13 @@ describe('ElectricityUnit', () => {
     expect(shallow(<ElectricityUnit amount={999999999} precision={3} />).find('.amount').text()).toBe('1000.000');
   });
 
+  it('supports instant electricity unit', () => {
+    expect(shallow(<ElectricityUnit amount={555} isInstant={true} />).find('.unit').text()).toBe('mW');
+    expect(shallow(<ElectricityUnit amount={555555} isInstant={true} />).find('.unit').text()).toBe('W');
+    expect(shallow(<ElectricityUnit amount={555555555} isInstant={true} />).find('.unit').text()).toBe('kW');
+    expect(shallow(<ElectricityUnit amount={555555555555} isInstant={true} />).find('.unit').text()).toBe('MW');
+  });
+
   describe('filterFloatingPoint', () => {
     it('sholud return a floating-point number by precision variable ', () => {
       expect(filterFloatingPoint(100.444, 0)).toBe('100');
