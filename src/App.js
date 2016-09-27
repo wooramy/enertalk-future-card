@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
 import DailyColumnChart from './DailyColumnChart';
+import RealtimeUsageChart from './RealtimeUsageChart';
 
 class App extends Component {
   render() {
@@ -17,6 +18,8 @@ class App extends Component {
 
         {/* TODO: @yongdamsh To view multiple components, apply react-router */}
         <DailyColumnChart />
+
+        <RealtimeUsageChart />
       </div>
     );
   }
