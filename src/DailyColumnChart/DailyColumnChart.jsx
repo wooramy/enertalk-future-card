@@ -1,9 +1,10 @@
 import React, { PropTypes } from 'react';
 import './DailyColumnChart.css';
+import ElectricityUnit from '../ElectricityUnit';
 
 const electricityPropShape = PropTypes.shape({
-  usage: PropTypes.number.required,
-  bill: PropTypes.number.required,
+  usage: PropTypes.number,
+  bill: PropTypes.number,
   start: PropTypes.number,
   end: PropTypes.number,
 });
@@ -18,12 +19,16 @@ function DailyColumnChart({ metering, forecast }) {
         <div className="metering">
           <p>이번 달 현재</p>
           <div className="metering-bill">{meteringBill}원</div>
-          <div className="metering-usage">{meteringUsage}mWh</div>
+          <div className="metering-usage">
+            {<ElectricityUnit amount={meteringUsage} />}
+          </div>
         </div>
         <div className="forecast">
           <p>이번 달 예상</p>
           <div className="forecast-bill">{forecastBill}원</div>
-          <div className="forecast-usage">{forecastUsage}mWh</div>
+          <div className="forecast-usage">
+            {<ElectricityUnit amount={forecastUsage} />}
+          </div>
         </div>
       </section>
     </article>
@@ -37,11 +42,11 @@ DailyColumnChart.propTypes = {
 
 DailyColumnChart.defaultProps = {
   metering: {
-    usage: 0,
+    usage: 150565000,
     bill: 0,
   },
   forecast: {
-    usage: 0,
+    usage: 234000000,
     bill: 0,
   },
 };
