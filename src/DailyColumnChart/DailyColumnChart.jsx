@@ -42,11 +42,11 @@ DailyColumnChart.propTypes = {
 
 DailyColumnChart.defaultProps = {
   metering: {
-    usage: 150565000,
+    usage: 0,
     bill: 0,
   },
   forecast: {
-    usage: 234000000,
+    usage: 0,
     bill: 0,
   },
 };
