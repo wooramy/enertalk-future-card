@@ -2,7 +2,8 @@ import React from 'react';
 import {shallow, mount} from 'enzyme';
 
 import RealtimeUsageChart from './RealtimeUsageChart';
-å
+import RealtimeUsage from './RealtimeUsage/RealtimeUsage';
+
 describe('RealtimeUsageChart', () => {
     let wrapper;
 
@@ -11,7 +12,7 @@ describe('RealtimeUsageChart', () => {
     });
 
     it('should render RealtimeUsageChart', () => {
-        expect(wrapper.find(RealtimeLabel).length).toEqual(1);
+        expect(wrapper.find(RealtimeUsage).length).toEqual(1);
     });
 
     it('default state value', () => {

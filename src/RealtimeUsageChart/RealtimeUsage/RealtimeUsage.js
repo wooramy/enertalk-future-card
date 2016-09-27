@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './RealtimeLabel.css';
+import './RealtimeUsage.css';
 
-class RealtimeLabel extends Component {
+class RealtimeUsage extends Component {
     render() {
         return (
             <div className="realtime-label">
@@ -11,12 +11,12 @@ class RealtimeLabel extends Component {
     }
 }
 
-RealtimeLabel.propTypes = {
+RealtimeUsage.propTypes = {
     usage: React.PropTypes.number.isRequired
 }
 
-RealtimeLabel.defaultProps = {
+RealtimeUsage.defaultProps = {
     usage: 0
 }
 
-export default RealtimeLabel;
+export default RealtimeUsage;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import RealtimeLabel from './RealtimeLabel/RealtimeLabel';
+import RealtimeUsage from './RealtimeUsage/RealtimeUsage';
 import './RealtimeUsageChart.css';
 
 class RealtimeUsageChart extends Component {
@@ -27,7 +27,7 @@ class RealtimeUsageChart extends Component {
         return (
             <div className="realtime-chart-container">
                 <h3>Realtime Usage</h3>
-                <RealtimeLabel usage={this.state.usage}/>
+                <RealtimeUsage usage={this.state.usage}/>
             </div>            
         )
     }
