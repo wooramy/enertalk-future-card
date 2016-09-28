@@ -42,19 +42,21 @@ describe('This Month', () => {
       let meteringInfoBox = wrapper.find('.metering');
 
       expect(meteringInfoBox.find('.metering-usage').text()).toBe('0Wh');
-      expect(meteringInfoBox.find('.metering-bill').text()).toBe('0원');
+      expect(meteringInfoBox.find('.metering-bill').text()).toBe('$ 0');
 
       wrapper.setProps({
         metering: {
           usage: 150000000,
           bill: 15000,
         },
+        country: 'KR',
+        language: 'ko',
       });
 
       meteringInfoBox = wrapper.find('.metering');
 
-      expect(meteringInfoBox.find('.metering-usage').text()).toMatch('150kWh');
-      expect(meteringInfoBox.find('.metering-bill').text()).toMatch(/15000/);
+      expect(meteringInfoBox.find('.metering-usage').text()).toBe('150kWh');
+      expect(meteringInfoBox.find('.metering-bill').text()).toBe('15,000원');
     });
   });
 
@@ -69,19 +71,21 @@ describe('This Month', () => {
       let forecastInfoBox = wrapper.find('.forecast');
 
       expect(forecastInfoBox.find('.forecast-usage').text()).toBe('0Wh');
-      expect(forecastInfoBox.find('.forecast-bill').text()).toBe('0원');
+      expect(forecastInfoBox.find('.forecast-bill').text()).toBe('$ 0');
 
       wrapper.setProps({
         forecast: {
           usage: 300000000,
           bill: 30000,
         },
+        country: 'KR',
+        language: 'ko',
       });
 
       forecastInfoBox = wrapper.find('.forecast');
 
       expect(forecastInfoBox.find('.forecast-usage').text()).toMatch('300kWh');
-      expect(forecastInfoBox.find('.forecast-bill').text()).toMatch(/30000/);
+      expect(forecastInfoBox.find('.forecast-bill').text()).toMatch('30,000원');
     });
   });
 });
