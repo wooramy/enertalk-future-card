@@ -16,13 +16,10 @@ describe('RealtimeUsageChart', () => {
     });
 
     it('default state value', () => {
-        const wrapper = shallow(<RealtimeUsageChart/>);
         expect(wrapper.state().usage).toEqual(0);
     });
 
     it('call generateRandomValue', () => {
-        const wrapper = shallow(<RealtimeUsageChart/>);
-
         wrapper.instance().generateRandomValue();
         expect(wrapper.state().usage).toBeGreaterThanOrEqual(0);
     });
