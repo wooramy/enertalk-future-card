@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "6"
+branches:
+  except:
+    - gh-pages
 deploy:
   provider: script
   script: scripts/deploy.sh
@@ -10,3 +13,5 @@ cache:
   bundler: true
   directories:
     - node_modules
+notifications:
+  email: false
