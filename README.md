@@ -1,5 +1,5 @@
 # EnerTalk Future Card
-[ ![Codeship Status for yongdamsh/enertalk-future-card](https://codeship.com/projects/488beda0-6552-0134-95d1-2a0c9a74fc2b/status?branch=master)](https://codeship.com/projects/175651)
+[![Build Status](https://travis-ci.org/yongdamsh/enertalk-future-card.svg?branch=attach_react_storybook)](https://travis-ci.org/yongdamsh/enertalk-future-card)
 
 EnerTalk UI components based on react
 

@@ -1,2 +1,2 @@
-import ElectricityBill from './ElectricityBill';
+import ElectricityBill from './ElectricityBill.jsx';
 export default ElectricityBill;

@@ -1,2 +1,2 @@
-import DailyColumnChart from './DailyColumnChart'
+import DailyColumnChart from './DailyColumnChart.jsx';
 export default DailyColumnChart;

@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "http://yongdamsh.github.io/enertalk-future-card",
   "devDependencies": {
+    "@kadira/storybook": "^2.20.1",
+    "@kadira/storybook-deployer": "^1.2.0",
     "enzyme": "^2.4.1",
     "react-addons-test-utils": "^15.3.2",
     "react-scripts": "0.6.1"
@@ -16,6 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "build-storybook": "build-storybook -s public -o .out",
+    "deploy-storybook": "storybook-to-ghpages"
   }
 }
