@@ -1,3 +1,3 @@
 #!/bin/bash
 
-npm run deploy-storybook
+node_modules/.bin/storybook-to-ghpages
