@@ -1,7 +1,9 @@
 #!/bin/bash
 
 ORIGIN_URL=`git config --get remote.origin.url`
-node ./node_modules/.bin/build-storybook -o .out
+
+npm install @kadira/storybook
+npm run build-storybook
 cd .out
 git init
 git config user.name "GH Pages Bot"
