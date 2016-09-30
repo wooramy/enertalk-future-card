@@ -2,7 +2,7 @@
 
 ORIGIN_URL=`git config --get remote.origin.url`
 
-npm install @kadira/storybook
+npm install
 npm run build-storybook
 cd .out
 git init
