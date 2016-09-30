@@ -6,8 +6,6 @@ npm install
 npm run build-storybook
 cd .out
 git init
-git config user.name "GH Pages Bot"
-git config user.email "yongdamsh@gmail.com"
 git add .
 git commit -m "Deploy Storybook to GitHub Pages"
 git push --force --quiet "$ORIGIN_URL" master:gh-pages
