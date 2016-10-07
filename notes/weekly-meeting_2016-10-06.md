@@ -1,4 +1,4 @@
-attendee: @yongdamsh @koansang @wooramy @hyuntak @MincheolC @
+참석자: @yongdamsh @koansang @wooramy @hyuntak @MincheolC @
 
 
 # *Why?*
@@ -6,11 +6,11 @@ attendee: @yongdamsh @koansang @wooramy @hyuntak @MincheolC @
 ```js
 function Card() {
   var state = getState();
-  return process(state);
+  return bindToTemplate(state);
 }
 
 function Card(state) {
-  return process(state);
+  return bindToTemplate(state);
 }
 ```
 
@@ -145,4 +145,4 @@ Configurations
   - [jest](https://facebook.github.io/jest/)
   - babel
   - webpack
-  - [travis CI](https://travis-ci.org/yongdamsh/enertalk-future-card)
+- [travis CI](https://travis-ci.org/yongdamsh/enertalk-future-card)
